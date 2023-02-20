@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,22 +13,32 @@ namespace appFormsContacto
 {
     public partial class Form1 : Form
     {
+
         public Form1()
         {
             InitializeComponent();
         }
-
-        Contacto x = new Contacto();
+        Contacto[] registro;
+        int i = 0;
 
         private void btnRegistro_ClicK(object sender, EventArgs e)
         {
-            x.Nombre = tbNombre.Text;
-            x.FechaNacimiento = DateTime.Parse(tbfecha.Text);
-            x.Telefono = tbTelefono.Text;
-            MessageBox.Show(x.ToString());
-
+            if (i < registro.Length)
+            {
+                Contacto x = new Contacto();
+                x.Nombre = tbNombre.Text;
+                x.FechaNacimiento = DateTime.Parse(tbfecha.Text);
+                x.Telefono = tbTelefono.Text;
+                registro[i] = x;
+                listaContactos.Items.Add(x.ToString());
+                i++;
+                tbfecha.Clear();
+            }
         }
 
-       
+        private void btnAceptar_Click(object sender, EventArgs e)
+        {
+            registro = new Contacto[int.Parse(tbCantidad.Text)];
+        }
     }
 }

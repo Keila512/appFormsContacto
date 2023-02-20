@@ -21,7 +21,7 @@ namespace appFormsContacto
         {
             get { return fechaNacimiento; }
             set { fechaNacimiento = value; }
-        }
+        } 
         public int Edad
         {
             get
@@ -31,7 +31,7 @@ namespace appFormsContacto
                 return edad;
             }
         }
-
+        
         public Persona()
         {
             nombre = string.Empty;
