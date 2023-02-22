@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -32,7 +31,6 @@ namespace appFormsContacto
                 registro[i] = x;
                 listaContactos.Items.Add(x.ToString());
                 i++;
-                tbfecha.Clear();
             }
         }
 
@@ -40,5 +38,7 @@ namespace appFormsContacto
         {
             registro = new Contacto[int.Parse(tbCantidad.Text)];
         }
+
+       
     }
 }

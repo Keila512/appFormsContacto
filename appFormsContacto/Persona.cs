@@ -22,6 +22,9 @@ namespace appFormsContacto
             get { return fechaNacimiento; }
             set { fechaNacimiento = value; }
         } 
+        /// <summary>
+        /// Propiedad de Edad solo muestra y lee el resultado
+        /// </summary>
         public int Edad
         {
             get

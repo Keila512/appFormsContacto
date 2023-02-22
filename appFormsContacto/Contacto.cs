@@ -18,6 +18,7 @@ namespace appFormsContacto
                 telefono = value.Replace(" ", "").Replace("-", "");
             }
         }
+        
         public Contacto() : base()
         {
             telefono = string.Empty;

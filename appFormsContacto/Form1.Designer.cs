@@ -144,7 +144,6 @@
             // 
             // listaContactos
             // 
-            this.listaContactos.FormattingEnabled = true;
             this.listaContactos.ItemHeight = 16;
             this.listaContactos.Location = new System.Drawing.Point(50, 353);
             this.listaContactos.Name = "listaContactos";
